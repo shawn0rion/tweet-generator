@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a541b204e2.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tweet Generator</title>
+</head>
+<body>
+    <form id="tweet-form">
+        <div class="input-field">
+            <label for="" >Pick a topic <span class="required">*</span></label>
+            <input required type="text" name="" id="tweet-topic" placeholder="like: Halo Reach is the best Halo">
+            <p class="description">So, what do you want to say?</p>
+        </div>
+        <div class="input-field">
+            <label for="">Set the tone <span class="required">*</span></label>
+            <select required>
+                <option value="Choose a tone">Choose a tone</option>
+                <option value="Friendly">Friendly</option>
+                <option value="Witty">Witty</option>
+                <option value="Sad">Sad</option>
+                <option value="Luxury">Luxury</option>
+                <option value="Angry">Angry</option>
+                <option value="Informative">Informative</option>
+                <option value="Educational">Educational</option>
+                <option value="Persuasive">Persuasive</option>
+                <option value="Entertaining">Entertaining</option>
+                <option value="Professional">Professional</option>
+            </select>            
+            <p class="description">And how do you want to sound?</p>
+        </div>
+        <div class="buttons">
+            <button type="reset" id="reset">Reset</button>
+            <button  type="submit" id="submit">Generate</button>
+        </div>
+    </form>
+    <div class="display-container hide">
+        <div class="instructions">
+            Click any twitter icon to finalize your tweet!
+        </div>
+        <div class="tweet-container"></div>
+    </div>
+    <div class="loader hide"></div>
+    <script src="script.js"></script>
+</body>
+</html>

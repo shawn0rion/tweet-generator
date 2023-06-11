@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  --twitter-blue: #1DA1F2;
+  --twitter-dark-blue: #005eff;
+  --font-white: #FFFFFF;
+  --font-light: #d7d5d5;
+  --font-grey: #a5a5a5;
+}
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+iframe{
+    height: 300px;
+    width: 100%;
+    border: 0;
+}
+
+form{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field{
+    display: flex; 
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.input-field label{
+    display: block;
+}
+
+.required{
+    color: #e70f0f;
+}
+
+.input-field input[type="text"]{
+    color: #8e8484;
+}
+
+.description{
+    color: #716b6b;
+
+}
+.input-field input,
+.input-field select{
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 2px solid var(--font-light);
+    background-color: transparent;
+    outline: 0;
+}
+
+
+input:focus,
+select:focus{
+    border: 2px solid #555;
+}
+
+
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.buttons button{
+    border-radius: 5px;
+    font-size:1rem;
+    transition: all .3s ease;
+}
+
+#reset:focus,
+#reset:hover {
+  background-color: #efeded;
+  outline: none;
+}
+
+#submit:focus,
+#submit:hover {
+  background-color: #3c9dff;
+  outline: none;
+}
+
+
+#reset{
+    color: #444;
+    background-color: #fff;
+    padding:10px 20px;
+    border: 1px solid var(--font-light);
+}
+
+#submit{
+    color: #fff;
+    background-color: var(--twitter-dark-blue);
+    padding: 10px 40px;
+    border: 0;
+}
+
+.tweet{
+    position: relative;
+    display: flex;
+    letter-spacing: 1px;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    background-color: #313237;
+    max-width: 400px;
+    border-radius: 10px;
+    flex-grow: 1;
+    transition: all .3s ease;
+}
+
+.loader{
+    display: unset;
+    height: 50px;
+    width: 50px;
+    border: 5px solid transparent;
+    border-top: 5px solid #999;
+    border-left: 5px solid #999; 
+    animation: spin 1.5s linear infinite;
+    border-radius: 50%;
+    margin: 150px auto 0px;
+}
+
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.display-container.hide,
+.loader.hide{
+    display: none;
+}
+
+
+.instructions{
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #555;
+    width: 100%;
+}
+
+.tweet-container{
+    display: flex;
+    padding: 50px 50px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tweet-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tweet:hover,
+.tweet:focus{
+    background-color: #43454e;
+}
+
+.twitter-link{
+    font-size: 1.3rem;
+
+}
+
+.user-details{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.user-text{
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pfp{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+.tweet a{
+    color: var(--twitter-blue);
+}
+
+.realname{
+    color:var(--font-light);
+    font-weight: 600;
+}
+
+.username{
+    color:var(--font-grey);
+    font-size: .8rem;
+}
+
+.tweet-text{
+    color:var(--font-light);
+    font-size: .95rem;
+    margin: 15px 0;
+    margin-top: 10px;
+}
+
+
+
+.date-posted{
+    color: var(--font-light)
+}
+
+.tweet-stats{
+    display: flex;
+    gap: 20px;
+    font-size: .9rem;
+}
+
+.fa-heart{
+    background-color: transparent;
+    color: #e70f0f;
+    font-size: 1rem;
+}
